@@ -1,15 +1,26 @@
-### Simple Krunner dbus template
+## Acronomy Krunner plugin
 
-This plugin provides a simple template for a Krunner plugin using dbus.
- 
-To run this plugin you have to execute the `make install-config` command.
-This installs the .desktop file so that your runner gets recognized.  
-Secondly you have to run your script. Because Krunner queries the dbus
-interface and does not load a plugin you can use for example a debugger.
- 
-More information can be found here:  
-https://cgit.kde.org/krunner.git/plain/src/data/org.kde.krunner1.xml  
-https://techbase.kde.org/Development/Tutorials/D-Bus/Introduction
+![screenshot](screenshot.png)
 
-On Debian/Ubuntu you need:   
-`sudo apt install python3 python3-hglib`
+This plugin allows to quickly look up an acronym on [Acronomy](https://acronomy.lw1.at/) directly from the Krunner KDE plasma search.
+
+#### Installation
+
+- copy the `plasma-runner-acronomy.desktop` file to `~/.local/share/kservices5/`
+- restart krunner: `kquitapp5 krunner; kstart5 krunner`
+
+The `acronomy.py` script needs to run permanently in the background to fetch the results.
+
+One easy way to accomplish this is to copy the `acronomy.desktop` to `~/.config/autostart/`.
+
+You can replace the search keyword (default `acr`) with the `--keyword` parameter.
+
+If you enable the `--less-privacy` mode, you don't need to specify any search keyword, but as a result all krunner searches are sent to the Astroacro API. (instead of only the ones starting with the search keyword)
+
+
+This plugin uses the [Astroacro API](https://acronomy.lw1.at/api/). ([Privacy Policy](http://lw1.at/i))
+
+
+--------------------
+
+based on [Krunner Python Plugin](https://store.kde.org/p/1333634/) by Alexander Lohnau licenced under  GPLv2 or later 

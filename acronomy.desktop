@@ -2,9 +2,9 @@
 Version=1.0
 Type=Application
 Name=Runner
-Comment=Autostart entry for a Krunner plugin
+Comment=Autostart entry for the Acronomy Krunner plugin
 Keywords=Runner;Krunner
 Categories=Utilities
-Exec=python3 "%{Folder_LOCATION}/astroacro.py"
+Exec=python3 "/path/to/acronomy.py"
 Icon=python
 StartupNotify=true

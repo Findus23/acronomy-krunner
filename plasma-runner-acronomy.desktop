@@ -1,15 +1,15 @@
 [Desktop Entry]
-Name=astroacro
+Name=Acronomy
 Comment=Look up astronomical Acronyms
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=accessories-dictionary
 X-KDE-PluginInfo-Author=Lukas Winkler
 X-KDE-PluginInfo-Email=kde@lw1.at
-X-KDE-PluginInfo-Name=astroacro
+X-KDE-PluginInfo-Name=acronomy
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-API=DBus
-X-Plasma-DBusRunner-Service=net.astroacro
-X-Plasma-DBusRunner-Path=/astroacro
+X-Plasma-DBusRunner-Service=net.acronomy
+X-Plasma-DBusRunner-Path=/acronomy
