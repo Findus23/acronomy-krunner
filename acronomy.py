@@ -34,7 +34,7 @@ class LocalData:
 
     def search(self, query: str):
         age = datetime.now() - self.last_updated
-        if age > timedelta(hours=3):
+        if age > timedelta(hours=48):
             self.fetch_data()
 
         query = query.lower()
@@ -47,7 +47,7 @@ class Runner(dbus.service.Object):
     def __init__(self, args):
         self.args = args
         self.data = LocalData()
-        dbus.service.Object.__init__(self, dbus.service.BusName("net.acronomy", dbus.SessionBus()), objpath)
+        dbus.service.Object.__init__(self, dbus.service.BusName("at.lw1.acronomy", dbus.SessionBus()), objpath)
 
     @dbus.service.method(iface, in_signature="s", out_signature="a(sssida{sv})")
     def Match(self, query: str):

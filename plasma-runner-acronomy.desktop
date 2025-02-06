@@ -11,5 +11,5 @@ X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-API=DBus
-X-Plasma-DBusRunner-Service=net.acronomy
+X-Plasma-DBusRunner-Service=at.lw1.acronomy
 X-Plasma-DBusRunner-Path=/acronomy

@@ -1,10 +1,7 @@
 install-config:
-	mkdir -p ~/.local/share/kservices5/
-	rm -f ~/.local/share/kservices5/plasma-runner-acronomy.desktop
-	kquitapp5 krunner; kstart5 krunner
-	cp plasma-runner-acronomy.desktop ~/.local/share/kservices5/
-	kquitapp5 krunner; kstart5 krunner
+	mkdir -p ~/.local/share/krunner/dbusplugins
+	cp plasma-runner-acronomy.desktop ~/.local/share/krunner/dbusplugins/plasma-runner-acronomy.desktop
+	kquitapp6 krunner
 
 create-autostart:
-	mkdir -p ~/.config/autostart/
-	cp astroacro.desktop ~/.config/autostart/
+	echo "[D-BUS Service]\nName=at.lw1.acronomy\nExec=\"/home/lukas/PycharmProjects/acronomy-krunner/acronomy.py\"" > ~/.local/share/dbus-1/services/lw1.at.acronomy.service
